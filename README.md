@@ -1,13 +1,18 @@
-[![Build Status](https://travis-ci.org/KoteiIto/node-athena.svg?branch=master)](https://travis-ci.org/KoteiIto/node-athena)
-[![Coverage Status](https://coveralls.io/repos/github/KoteiIto/node-athena/badge.svg?branch=master)](https://coveralls.io/github/KoteiIto/node-athena?branch=master)
+[![Build Status](https://travis-ci.org/phasath/node-athena.svg?branch=master)](https://travis-ci.org/phasath/node-athena)
+[![Coverage Status](https://coveralls.io/repos/github/phasath/node-athena/badge.svg)](https://coveralls.io/github/phasath/node-athena)
+
 
 athena-client - a  simple aws athena client for nodejs and typescript
 ===========================
-This is version 2.x document. 1.x document is [here](https://github.com/KoteiIto/node-athena/tree/1.x)
+This is version 2.x document.
 
 Install with:
 
     npm install athena-client
+
+## FORKED REPOSITORY
+
+This is a forked repository created to fix the AWS global config overwriting.
 
 ## Usage Example
 
@@ -67,7 +72,7 @@ stream.on('error', function(e) {
 ### athena = require("athena-client")
 This module exposes the `createClient` and `setConcurrentExecMax` method, which execute query to AWS Athena.
 
-### client = athena.createClient([_clientConfig_], [_awsConfig_])
+### client = athena.createClient([_clientConfig_], [_awsConfig_], overWriteAWSClient: boolean)
 Returns a client instance attached to the account specified by the given `clientConfig` and `awsConfig`.
 
 ### athena.setConcurrentExecMax([_concurrentExecMax_])
