@@ -9,4 +9,4 @@ export default class Athena {
     static createClient: typeof createClient;
     static setConcurrentExecMax: typeof setConcurrentExecMax;
 }
-export declare function createClient(clientConfig: AthenaClientConfig, awsConfig: AwsConfig): AthenaClient;
+export declare function createClient(clientConfig: AthenaClientConfig, awsConfig: AwsConfig, overWriteAWSClient?: boolean): AthenaClient;
